@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--El atributo lang , del inglés language (idioma), es utilizado para indicar el idioma del contenido de un elemento-->
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>5. Manejo de formularios HTML con un ejemplo</title>
+</head>
+
+<body>
+  <h2>Formularios (Forms)</h2>
+  <p>
+  Los formularios HTML sirven para interactuar con el usuario, permitiendo la introducción de datos para ser enviados a un servidor web para su procesamiento y almacenamiento, o se usan en el lado del cliente para provocar de alguna manera una actualización inmediata de la interfaz por ejemplo, añadir elemento a una lista u ocultar una función de interfaz de usuario.
+  </p>
+<!--Primer elemento del formulario FORM-->
+  <form>
+    <p>
+    <!--Entrada de Texto-->
+      <label>Usuario : <input type="text" /></label>
+    </p>
+
+    <p>
+      <label>Contraseña : <input type="password" /></label>
+    </p>
+
+    <p>
+      <!--Boton de Envío-->
+      <button type="submit">Enviar</button>
+    </p>
+  </form>
+  <br>
+  <h2>Seleccione su Sexo</h2>
+  <form>
+  <!--Entradas Radio que son excluyentes-->
+    <label>Hombre<input type="radio" name="sepso" value="macho" /></label>
+    <label>Mujer<input type="radio" name="sepso" value="hembra" /></label>
+  </form>
+  <br>
+  <h2>Escoja su Segunda Lengua</h2>
+  <form>
+  <!--Entradas Checkbox que pueden elegirse varias -->
+    <ul style="list-style-type:none;">
+      <li><input type="checkbox" name="lenguaje" value="ingles" />Inglés</li>
+      <li><input type="checkbox" name="languaje" value="frances" />Frances</li>
+      <li><input type="checkbox" name="languaje" value="portugues" />Portugues</li>
+    </ul>
+	</form>
+	<br>
+	<h2>Situación Laboral</h2>
+  <form>
+  <!--Lista desplegable-->
+   <select name="trabajo">
+     <option value="empleado">Empleado</option>
+     <option value="contratista">Contratista</option>
+     <option value="desempleado">Buscando Trabajo</option>
+   </select>
+  </form>
+  <br>
+  <form>
+  <!--Bloque de texto para escritura del usuario-->
+    <textarea name="mensajeBienvenida" rows="3" cols="40">Curso Programación Web 1</textarea>
+  </form>
+  <br>
+    <h2>Tags Fieldset y Legend</h2>
+    <form>
+      <fieldset>
+        <legend><b><i><h3>Información E.P.S.</h3></i></b></legend> 
+	      <p>
+          <label>
+<!--Lista desplegable-->
+          <h4><ins>Tipo Aportante</ins></h4>
+            <select name="aportante">
+              <option>--Ninguno--</option>
+              <option>Beneficiario</option>
+              <option>Sisben</option>
+              <option>Conyuge</option>
+              <option>Trabajador</option>
+            </select>
+          </label>
+        </p>
+	<p>
+    <label><b>Primer Nombre: </b><input name="firstName" /></label>
+  </p>
+	<p>
+    <label><b>Primer Apellido: </b><input name="lastName" /></label>
+  </p>
+	<p>
+    <b>Tipo de Servicio :</b>
+    <label><input type="radio" name="atencion" value="prepago" /> Medicina Prepagada</label>
+    <label><input type="radio" name="atencion" value="prepobre" /> Plan Obligatorio</label>
+  </p>   
+	<p>
+	  <!--Entrada de Email-->
+    <label><b>Correo Electrónico: </b><input type="email" name="email" /></label>
+  </p>
+	<p>
+	  <!--Entrada de fecha-->
+    <label><b>Fecha de Nacimiento: </b><input type="date" name="fechaCumple"></label>
+  </p>
+	<p>
+    <label>
+      <b>Dirección :</b>
+      <br />
+      <textarea name="direccion" cols="40" rows="3"></textarea>
+    </label>
+  </p>
+	<p>
+    <button type="enviar"><b><i> Enviar Datos </i></b></button>
+  </p>
+
+  </fieldset>
+  </form>
+  
+</body>
+</html>

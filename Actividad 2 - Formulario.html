@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--El atributo lang , del inglés language (idioma), es utilizado para indicar el idioma del contenido de un elemento-->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Manejo de Formularios - Jaime Barragán Velasco</title>
+</head>
+
+<body>
+    <!-- Trae la imagen de la web de la universidad, se da el path completo -->
+    <center><img src="https://www.uniremington.edu.co/wp-content/uploads/2019/02/logo-universdad.png" width="400" height="100">
+        <!-- Cambia los estilos de los encabezados del formulario -->
+        <h1><FONT FACE="verdana">Información del Estudiante</FONT></h1>
+        <u><FONT FACE="courier">Ingrese los siguientes datos:</FONT></u>
+    </center>
+
+    <!--Etiqueta para el manejo de formularios-->
+    <form>
+        <!--Etiqueta para Crear Tablas-->
+        <table border="0" align="Center" style="empty-cells: hide;
+        border-collapse: separate; border-spacing: 5px;">
+        <!-- etiqueta <tr> define filas, etiqueta <td> define celdas -->
+            <tr><p>
+                <!--Sintaxis para crear etiquetas-->
+                <td><label for="cedula"><strong>Cédula: </strong></label></td>
+                <!--Sintaxis para crear Cuadros de texto-->
+                <td><input type="text" name="cedula" id="cedula" placeholder="000.000.000" size="12" /></td>
+            </tr>
+            <tr>
+                <!-- Etiqueta placeholder: pone un texto en gris -->
+                <td><label for="nombre"><strong>Nombre: </strong></label></td>
+                <td><input type="text" name="nombre" id="nombre"  placeholder="Escriba Nombres y Apellidos" size="40" /></td>
+            </tr>
+            <tr>
+                <!-- Se definen edades minima y maxima -->
+                <td><label for="edad"><strong>Edad: </strong></label></td>
+                <td><input type="number" name="edad" id="edad" value="" placeholder="100" size="5" min="15" max="100" /></td>
+            </tr>
+            <tr>
+                <td><label for="email"><strong>E-mail: </strong></label></td>
+                <td><input type="email" name="email" id="email" value="" size="40" placeholder="- @ -" /></p></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><span><strong>Sexo</strong></span></td>
+                <td>
+                    <!--Sintaxis para crear radio botones o botones de opción-->
+                    <input type="radio" id="mujer" name="sexo" /><label for="choice1">Femenino</label>
+                    <input type="radio" id="hombre" name="sexo" /><label for="choice2">Masculino</label>
+                    <input type="radio" id="otro" name="sexo" /><label for="choice3">No Binario</label>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <!-- Se escoge la fecha de nacimiento: Año, Mes. Día -->
+                <td><label for="fecha"><strong>Fecha de Nacimiento: </strong></label></td>
+                <!--Sintaxis para crear objeto tipo fecha-->
+                <td><input type="date" id="fecha" name="fecha" size="11" maxlength="11" placeholder="dd/mm/aaaa" size="30" /></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <!-- Cuadro para seleccionar la opción de estudio -->
+                <td><label for="facultad"><strong>Facultad: </strong></label></td>
+                <!--Sintaxis para crear una lista desplegable-->
+                <td><select id="facultad">
+                        <option value=" "><i>Seleccione...</i></option>
+                        <option value="Ingenieria">Ingeniería</option>
+                        <option value="Salud">Medicina</option>
+                        <option value="Veterinaria">Veterinaria</option>
+                        <option value="Contable">Contaduría</option>
+                        <option value="Empresarial">Administración</option>
+                        <option value="Juridica">Derecho</option>
+                        <option value="Diseno">Diseño</option>
+                    </select></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2"><strong>Comentarios sobre su satisfacción personal </strong><br />
+                    <!--Sintaxis para crear un área de texto-->
+                    <textarea id="textarea1" name="comentarios" cols="62" rows="7" style="width:auto;" placeholder="Nos interesa saber si esta página le ha sido útil, por favor déjenos su comentario."></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <!--Sintaxis para crear una cuadros de lista o cuadros de chequeo-->
+                    <input type="checkbox" name="recibir_info" checked><strong>
+                    Deseo recibir notificación a mi correo electrónico.</strong></td>
+            </tr>
+
+            </br>
+
+            <tr>
+                <!--Sintaxis para crear botones de comando-->
+                <td><input type="submit" value="Enviar" /></td>
+                <td><input type="reset" value="Limpiar"> </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+
+</html>
